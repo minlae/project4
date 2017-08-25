@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Goodreads API</title>
+
+</head>
+<body>
+
+	<header>
+	<!-- EXTRA, if finish early: Have a selection so you can search by Author OR by Title -->
+		<h1>Top Books By Author</h1>
+		<form action="">
+		  <label for="animal">Type in author name</label>
+		  <input type="text" id="authorInput">	
+	  </form>
+	</header>
+
+	<main>
+		<div class="container" id="books">
+			<div class="bookResult">
+		</div>
+		<!-- NB: We don't want the below in the HTML here. We want to append it via JS. -->
+		  <!-- <h2>Title of Book</h2>
+		  <p class="author">Author Name</p>
+		  <p>Rating</p> -->
+		  <!-- <img src="url-to-image" alt=""> -->
+		</div>
+	</main>
+
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+	<script src="scripts/script.js"></script>
+</body>
+</html>
