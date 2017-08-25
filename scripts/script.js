@@ -60,16 +60,21 @@ bookApp.displayResults = function(data) {
     });
     // console.log(sortByRating);
 
-     correctAuthors.forEach(function(book) {
-        let authorFilt = $("<p>").addClass("author").text(book.best_book.author.name);
-        let title = $("<h2>").text(book.best_book.title);
-        let rating = $("<p>").text(book.average_rating);
-        // let totalRating = ("<p>").text(book.ratings_count.$t);
-        let image = $("<img>").attr("src", book.best_book.image_url);
-        let bookBlock = $("<div>").addClass("bookResult").append(authorFilt, title, rating, image);
-        $("#books").append(bookBlock); 
-        console.log(book.best_book.author.name);
-     });
+    // counter for books. But you can just use index instead
+    // let i = 1;
+    
+    correctAuthors.forEach(function(book, index) {
+        if (index <= 11) {
+            let authorFilt = $("<p>").addClass("author").text(book.best_book.author.name);
+            let title = $("<h2>").text(book.best_book.title);
+            let rating = $("<p>").text(book.average_rating);
+            // let totalRating = ("<p>").text(book.ratings_count.$t);
+            let image = $("<img>").attr("src", book.best_book.image_url);
+            let bookBlock = $("<div>").addClass("bookResult").append(index+1, authorFilt, title, rating, image);
+            $("#books").append(bookBlock); 
+            console.log(book.best_book.author.name);
+        }
+    });
 
 };
 
@@ -89,6 +94,7 @@ bookApp.events = function() {
     });
     
 }
+
 
 bookApp.init = function(){
     bookApp.events();

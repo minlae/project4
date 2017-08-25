@@ -3,13 +3,14 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Goodreads API</title>
+	<link href="https://fonts.googleapis.com/css?family=Lato:400,900|Merriweather:300,400" rel="stylesheet">
 
 </head>
 <body>
 
 	<header>
 	<!-- EXTRA, if finish early: Have a selection so you can search by Author OR by Title -->
-		<h1>Top Books By Author</h1>
+		<h1>Top 10 Books By Author</h1>
 		<form action="">
 		  <label for="animal">Type in author name</label>
 		  <input type="text" id="authorInput">	
@@ -18,13 +19,7 @@
 
 	<main>
 		<div class="container" id="books">
-			<div class="bookResult">
-		</div>
-		<!-- NB: We don't want the below in the HTML here. We want to append it via JS. -->
-		  <!-- <h2>Title of Book</h2>
-		  <p class="author">Author Name</p>
-		  <p>Rating</p> -->
-		  <!-- <img src="url-to-image" alt=""> -->
+			<div class="bookResult"></div>
 		</div>
 	</main>
 

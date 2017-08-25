@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Testing Numbers</title>
+</head>
+<body>
+	
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+	<script>
+		$(function(){
+			let myArray = [ 
+			{Obj1: "A"},
+			{Obj2: "B"},
+			{Obj3: "C"},
+			{Obj4: "D"},
+			{Obj5: "E"}
+			]
+
+			let i = 1;
+
+			myArray.forEach(function(object) {
+				console.log(i++, object);
+			});
+
+		});
+	</script>
+</body>
+</html>
