@@ -64,15 +64,17 @@ bookApp.displayResults = function(data) {
     // let i = 1;
     
     correctAuthors.forEach(function(book, index) {
-        if (index <= 11) {
-            let authorFilt = $("<p>").addClass("author").text(book.best_book.author.name);
+        if (index <= 10) {
+            let authorFilt = $("<h2>").addClass("author").text(book.best_book.author.name);
             let title = $("<h2>").text(book.best_book.title);
             let rating = $("<p>").text(book.average_rating);
             // let totalRating = ("<p>").text(book.ratings_count.$t);
             let image = $("<img>").attr("src", book.best_book.image_url);
-            let bookBlock = $("<div>").addClass("bookResult").append(index+1, authorFilt, title, rating, image);
+            // let authorHeading = 
+            let bookBlock = $("<div>").addClass("bookResult").append(index+1, title, rating, image);
             $("#books").append(bookBlock); 
             console.log(book.best_book.author.name);
+            // $("bookResult").css("display","block");
         }
     });
 
