@@ -3,13 +3,68 @@
 @import "setup";
 @import "mixins";
 
-.wrapper {
-	max-width: 900px;
+$sans-serif: "Lato", sans-serif;
+$serif: "Merriweather", serif;
+
+// do alternating colours for every new result.
+
+html {
+	font-size: 62.5%;
 }
 
-.bookResult {
-	border: 2px solid red;
-	display: flex;
-	margin: 0 auto;
-	// display: none;
+body {
+	font-family: $sans-serif;
 }
+
+h1 {
+	font-size: 2.5rem;
+}
+
+h2 {
+	font-size: 2.0rem;
+}
+
+p {
+	font-size: 1.4rem;
+	font-family: $serif;
+}
+
+form {
+	font-size: 1.5rem;
+}
+
+.wrapper {
+	max-width: 900px;
+	margin: 0 auto;
+	display: flex;
+}
+
+span {
+	clear: both;
+	font-size: 3.0rem;
+}
+
+.searchForm {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+#books {
+	margin: 0 auto;
+
+	.bookResult {
+		border: 2px solid red;
+		display: flex;
+		margin: 0 auto;
+		// display: none;
+	}
+
+	.textTest {
+		border: 2px solid blue;
+		// display: flex;
+	}
+}
+
+
