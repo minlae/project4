@@ -17,12 +17,6 @@
 	  }
 	}
 
-	// @else if $breakPoint == "large" {
-	//   @media (min-width: 900px) {
-	//     @content;
-	//   }
-	// }
-
 	@else {
 	  @media ($breakPoint) {
 	    @content;
