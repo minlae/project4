@@ -3,18 +3,20 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Goodreads API</title>
-	<link href="https://fonts.googleapis.com/css?family=Lato:400,900|Merriweather:300,400" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Lato:100,400|Merriweather:400" rel="stylesheet">
 	<link rel="stylesheet" href="styles/styles.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 </head>
 <body>
 
 	<header>
-		<div class="nav"></div>
+		<div class="goodreads">
+			<p>Powered by</p><a href="https://www.goodreads.com/api"><img src="images/goodreadslogo.png" alt="image of the goodreads logo"></a>
+		</div>
 	</header>
 
 	<main>
-	<!-- EXTRA, if finish early: Have a selection so you can search by Author OR by Title -->
 	<div class="searchForm">
 		<h1>Top Books By Author</h1>
 		
@@ -25,20 +27,10 @@
 	</div>
 		<div class="wrapper">
 			<div id="books"></div>
-			<!-- <div class="wrapper"> -->
-				<!-- Don't need this, you're adding it via js! <div class="bookResult"></div> -->
-			<!-- </div> -->
-		<!-- </div> -->
-		<!-- <div class="mainContainer"> <<this one would be what we append everything to -->
-			<!-- <div class="imagesAndText"> << can you append a div to a div?? -->
-			<!-- put the text only into its own div and append it? -->
-			<!-- <div class="text_only"></div> -->
-			<!-- </div> -->
-		<!-- </div> -->
 	</main>
 
 	<footer>
-		
+
 	</footer>
 
 	<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>

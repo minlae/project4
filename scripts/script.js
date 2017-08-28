@@ -40,7 +40,7 @@ bookApp.getBook = function(query) {
     	}
     }).then(function(res){
         let searchResults = res.GoodreadsResponse.search.results.work;
-        // console.log(searchResults);
+        console.log(searchResults);
         if (searchResults) {
             bookApp.displayResults(searchResults);
         }

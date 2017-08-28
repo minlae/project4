@@ -1,20 +1,27 @@
 @mixin respond-to($breakPoint) {
 	@if $breakPoint == "small" {
-		@media (max-width: 480px) {
+		@media (max-width: 600px) {
 			@content;
 		}
 	}
-	@else if $breakPoint == "medium" {
-	  @media (max-width: 768px) {
+
+	@else if $breakPoint == "smallish" {
+	  @media (max-width: 700px) {
 	    @content;
 	  }
 	}
 
-	@else if $breakPoint == "large" {
-	  @media (min-width: 940px) {
+	@else if $breakPoint == "medium" {
+	  @media (max-width: 900px) {
 	    @content;
 	  }
 	}
+
+	// @else if $breakPoint == "large" {
+	//   @media (min-width: 900px) {
+	//     @content;
+	//   }
+	// }
 
 	@else {
 	  @media ($breakPoint) {
