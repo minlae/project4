@@ -48,6 +48,8 @@ bookApp.getBook = function(query) {
         // put your "search cannot be found" message here
         alert("Sorry, there are no results with that name. Try entering the author's full name.");
     }
+    }).fail(function(error) {
+        alert("Something went wrong. Please try again.")
     });
 };
 
@@ -79,10 +81,10 @@ bookApp.displayResults = function(data) {
             let rating = $("<p>").text(`Goodreads rating: ${book.average_rating}`);
             // let totalRating = ("<p>").text(book.ratings_count.$t);
             let image = $("<img>").attr("src", book.best_book.image_url); 
-            // let imageDiv = $("<div>").addClass("imageDiv").append(image);
+            let imageContainer = $("<div>").addClass("imageContainer").append(image);
             let indexNumber = $("<span>").append(index+1);
             let textTest = $("<div>").addClass("textTest").append(title, authorFilt, rating);
-            let bookBlock = $("<div>").addClass("bookResult").append(image, textTest);
+            let bookBlock = $("<div>").addClass("bookResult").append(imageContainer, textTest);
             $("#books").append(indexNumber);
             $("#books").append(bookBlock);
 
